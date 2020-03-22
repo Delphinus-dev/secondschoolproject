@@ -1,6 +1,6 @@
 # Simple MVC website
 ## Description
-2 other students and I had to use a simple PHP MVC structure with some cool vendors/libraries such as Twig and Grumphp to create a website. We had been learning PHP, MVC and Twig for a few weeks. The assignment was to create a website for a non profit organisation : login space for admin and members, blog, etc. We worked together using the SCRUM agile process framework.
+3 other students and I had to use a simple PHP MVC structure with some cool vendors/libraries such as Twig and Grumphp to create a website. We had been learning PHP, MVC and Twig for a few weeks. The assignment was to create a website for a non profit organisation : login space for admin and members, blog, etc. We worked together using the SCRUM agile process framework.
 
 ## Steps
 1. Clone the repo from Github.
