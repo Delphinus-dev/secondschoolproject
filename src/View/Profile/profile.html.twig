@@ -1,0 +1,148 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+    {% include 'Profile/style.html.twig' %}
+{% endblock %}
+{% block title %}Profil de {{ profile.firstname }}{% endblock %}
+{% block content %}
+    <div>
+        <div class="container emp-profile margin_mobile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="{{ profile.avatar }}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                            <h5>
+                                Profil de {{ profile.firstname }}
+                            </h5>
+                            <div class="row align-items-center" style="margin-left: 0px">
+                                <h6>{{ skills.membre }}</h6>
+                                {% if skills.membre != 'Administrateur' and session.admin == '1'%}
+                                <div class="font-icon-example justify-content-around">
+                                    <form method="post" action="">
+                                        <button type="submit" style="display:contents"><div class="item home text-danger"><i class="admin_icon fas fa-user-shield text-danger"></i><span>Ajout admin</span></div></button>
+                                        <input type="hidden" name="admin" value="1">
+                                    </form>
+                                </div>
+                                {% endif %}
+                                {% if skills.membre == 'Administrateur' and session.admin == '1'%}
+                                    <div class="font-icon-example justify-content-around">
+                                        <form method="post" action="">
+                                            <button type="submit" style="display:contents"><div class="item home text-danger"><i class="admin_icon fas fa-user-shield text-danger"></i><span>Suppr admin</span></div></button>
+                                            <input type="hidden" name="admin" value="0">
+                                        </form>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">À propos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#annonces" role="tab" aria-controls="annonces" aria-selected="false">Ses annonces</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-icon-example justify-content-around">
+                            <form method="post" action="">
+                                <button type="submit" style="display:contents"><div class="item home text-danger"><i class="{{ connaissance.class }} fa-heart text-danger"></i><span>{{ connaissance.name }}</span></div></button>
+                                <input type="hidden" value="{{ profile.id }}" name="{{ connaissance.fonction }}">
+                            </form>
+                        </div>
+                        <div class="font-icon-example justify-content-around">
+                            <div class="item home text-danger"><a href="/signal/signaluser/{{ profile.id }}"><i class="fas fa-exclamation text-danger"></i><span>Signaler le profil</span></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p class="Skill">Compétences</p>
+                            <p>{{ skills.0 }}</p>
+                            <p>{{ skills.1 }}</p>
+                            <p>{{ skills.2 }}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Pseudo</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{ profile.login }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Nom</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{ profile.firstname }} {{ profile.lastname }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{ profile.email }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Présentation</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{ profile.description | raw }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="annonces" role="tabpanel" aria-labelledby="profile-tab">
+                                <table id="myTable" class="display" style="width:100%; background: whitesmoke">
+                                    <thead>
+                                    <tr>
+                                        <th>Titre</th>
+                                        <th>Date</th>
+                                        <th>Heure de début</th>
+                                        <th>Heure de fin</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody style="background: #7597ff">
+
+                                    {% for searchid in search %}
+                                        {% if  profile.id == searchid.id %}
+                                            <tr class="table-primary">
+                                                <td style="background: whitesmoke"><a href="/Search/Posts/{{ searchid.post_id }}" class="badge badge-warning"> {{ searchid.title }}</a></td>
+                                                <td style="background: whitesmoke">{{ searchid.start_day }}</td>
+                                                <td style="background: whitesmoke">{{ searchid.start_hour }}</td>
+                                                <td style="background: whitesmoke">{{ searchid.end_hour }}</td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+{% block javascript %}
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+{% endblock %}

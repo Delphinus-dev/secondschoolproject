@@ -1,0 +1,40 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Contactez-nous{% endblock %}
+{% block content %}
+
+<form action="" method="POST">
+    <div id="form">
+        <h3>
+            Demande d'aide
+        </h3>
+        <div class="card hint" style="width: 80%;">
+            <div class="card-body hint">
+            Avant d'envoyer un message, n'hésitez pas à consulter les réponses aux <a href="/Home/faq">questions les plus fréquentes</a>.
+            </div>
+        </div>
+        <div class="card hint" style="width: 80%;">
+            <div class="card-body hint">
+            Pour vos demandes concernant l'adhésion à l'association, merci d'écrire à <a href="mailto:adhesion@strashelp.org">cette adresse</a>.<br>
+            Pour les questions d'ordre plus général, ou un contact professionnel, merci d'écrire à <a href="mailto:info@strashelp.org">cette adresse</a>.
+            </div>
+        </div>
+        <input type="hidden" value="{{ user.id }}" name="user_id">
+        <input type="hidden" value="{{ user.message_date }}" name="message_date">
+        <label for="themeList">Thème de votre question</label>
+        <SELECT id="themeList" name="theme" size="1" required>
+            <OPTION value="">--Choisir dans la liste--
+            <OPTION value="Site">Utilisation du site
+            <OPTION value="Account">Gestion de mon compte
+            <OPTION value="Helpers">Communauté des helpeurs
+            <OPTION value="Other">AUTRES
+        </SELECT>
+        <label for="message">Votre message</label>
+        <input type="text" id="message" value="{{ user.message }}" name="message" required><br>
+        <div class="button">
+            <input type="submit" value="Envoyer">
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

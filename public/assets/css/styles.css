@@ -1,0 +1,498 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+nav {
+  z-index: 999;
+}
+nav ul {
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+#myTable{
+  z-index: 1;
+}
+
+.clickable {
+  cursor: pointer !important;
+}
+
+.logoHeader {
+  width: 50px;
+}
+
+.backgroundUnlogged {
+  background: #138496;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 0px;
+  z-index: 2000;
+}
+.background {
+  background: #138496;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 0px;
+  z-index: 2000;
+}
+
+.ck-editor__editable
+{
+  min-height: 200px !important;
+}
+.headerFlex {
+  display: flex !important;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.titreUnloggedContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerMenuUnlogger{
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  align-items: center;
+}
+
+.headerMenuUnlogger a{
+  color: white;
+  text-decoration: none;
+}
+
+.headerMenuUnlogger a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+h1 a {
+  color: white;
+  text-decoration: none;
+}
+h1 a:hover {
+  color: white;
+  text-decoration: none;
+}
+.font-icon-example {
+  max-width: 750px;
+  height: 70px;
+  display: table;
+  z-index: 2;
+}
+
+.font-icon-example .item {
+  display: block;
+  text-align: center;
+  width: 110px;
+  vertical-align: middle;
+  padding-bottom: 20px;
+  transition: 0.2s;
+  transform: translateY(10px);
+}
+
+.font-icon-example .item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-icon-example .item span {
+  text-decoration: none;
+  opacity: 0;
+  font-size: 14px;
+}
+
+.font-icon-example .item:hover span {
+  display: initial;
+  color: inherit;
+  opacity: 1;
+}
+
+.font-icon-example .item i {
+  width: 100%;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.font-icon-example .item:hover {
+  transform: translateY(3px);
+}
+
+.font-icon-example .item.home:hover {
+  color: #02546B;
+}
+
+.font-icon-example .item.profile:hover {
+  color: #02546B;
+}
+
+.font-icon-example .item.statistics:hover {
+  color: #02546B;
+}
+
+.font-icon-example .item.about:hover {
+  color: #02546B;
+}
+
+.font-icon-example .item.contact:hover {
+  color: #02546B;
+}
+
+.font-icon-example .item.search:hover {
+  color: #02546B;
+}
+.cachee {
+  transition: 1s ease;
+}
+.profilPic {
+  display: flex;
+  justify-content: center;
+}
+.overlay-image {
+  position: relative;
+}
+/* Image originale */
+.overlay-image .image {
+  display: block;
+}
+/* Overlay */
+.overlay-image .hover {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+/* Apparition overlay sur passage souris */
+.overlay-image:hover .hover {
+  opacity: 1;
+  background-color: #00002277;
+  border-radius: 5px;
+}
+/* Texte original */
+.overlay-image .text {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.5em;
+  /*
+  text-shadow: 2px 2px 2px #000;
+  */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  width: 100%;
+}
+.overlay-image .text2 {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+
+a .profilPicChange{
+  position: relative;
+  top : -30px;
+  color: white !important;
+  height: 30px;
+}
+a:hover .profilPicChange {
+  color: blue !important;
+  background-color: #00000088 !important;
+  text-decoration: none;
+}
+
+.card .hint{
+  background-color: #FFC890 !important;
+}
+.card-body .hint{
+  color: darkred !important;
+}
+
+footer {
+  background-color: #138496;
+  color: white;
+  bottom: 0;
+  width:100%;
+  margin-top: 180px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: white;
+}
+
+footer ul {
+  list-style:none;
+  margin-left:0;
+  padding-left:10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.details ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.networks ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-basis: content;
+  align-items: center;
+}
+
+.footer {
+  justify-content: center;
+}
+
+.page_wrap {
+  min-height: 100%;
+  margin-bottom: -180px;
+}
+.page_wrap:after {
+  content: "";
+  display: block;
+}
+.site_footer, .page-wrap:after {
+  height: 180px;
+}
+
+.child {
+  justify-content: center;
+}
+
+.child ul,
+.child .details{
+  justify-content: center;
+  align-items: center;
+}
+
+footer h4{
+  font-size: 20px;
+}
+
+.covered {
+  display: none;
+  height: 40px;
+}
+
+.bricolage {
+  text-shadow: 0 0 10px black;
+  cursor:pointer;
+  background-image: url("../images/bricolage.jpg");
+  background-color: rgba(0,0,80,0.3);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center;
+}
+
+.cuisine {
+  text-shadow: 0 0 10px black;
+  cursor:pointer;
+  background-image: url("../images/cuisine.jpg");
+  background-color: #FF890088;
+  background-blend-mode: hard-light;
+  background-size: cover;
+  background-position: center;
+}
+
+.education {
+  text-shadow: 0 0 10px black;
+  cursor:pointer;
+  background-image: url("../images/education.jpg");
+  background-color: #89FF0044;
+  background-blend-mode: hard-light;
+  background-size: cover;
+  background-position: center;
+}
+.blogPreview {
+  text-shadow: 0 0 10px black;
+  cursor:pointer;
+  background-size: cover;
+  background-position: center;
+}
+.blogView {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .font-icon-example .item {
+    display: table-cell;
+    padding-bottom: 0;
+  }
+  .font-icon-example {
+  }
+  footer h4{
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer li {
+    font-size: 12px;
+  }
+  .font-icon-example .item {
+    display: table-cell;
+    padding-bottom: 0;
+  }
+  .font-icon-example {
+  }
+  footer h4{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer li {
+    font-size: 11px;
+  }
+  footer{
+    margin-top: 250px;
+  }
+  .page_wrap {
+    margin-bottom: -230px;
+  }
+  .site_footer{
+    margin-bottom: 50px;
+  }
+
+  .background {
+    width: 100% !important;
+    height: 70px;
+    position: fixed;
+    top:calc(100% - 70px);
+    background: #138496;
+    justify-content: center;
+  }
+
+  nav {
+    width: 100% !important;
+    display: flex;
+  }
+  nav ul {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0;
+  }
+
+  .font-icon-example .item i {
+    font-size: 150% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .font-icon-example .item span {
+    display: none !important;
+    font-size: 50% !important;
+  }
+  .font-icon-example .item {
+    display: block;
+    text-align: center;
+    width: 70px;
+    vertical-align: middle;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .font-icon-example .item:hover {
+    transform: translateY(0) !important ;
+  }
+  .covered {
+    display: block;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 766px) {
+  footer li {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5em !important;
+  }
+  .titreUnloggedContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .unlogged {
+    transform: translateY(-10px);
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .child ul,
+  .child .details,
+  .details h4{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details ul,
+  .networks ul{
+    align-items: center;
+  }
+
+  footer h4{
+    font-size: 24px;
+  }
+}
+
+.unloggedfooter{
+  position: fixed;
+}

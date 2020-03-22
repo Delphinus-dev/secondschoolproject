@@ -1,0 +1,204 @@
+body{
+    background-color: lightgrey;
+}
+
+.edit_profil{
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.edit_arround{
+    margin: 10px;
+}
+
+.input_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit_submit{
+    margin: 10px;
+}
+
+.h1_center{
+    text-align: center;
+    margin: 0.5em;
+}
+
+
+.image{
+    width: auto;
+    height: 200px;
+}
+
+.image_Card{
+    height: 50px;
+}
+
+.admin_icon{
+    font-size: 1em!important;
+}
+
+/* partie connaissances sur le profil */
+
+.playerWall.detailed li {
+    display: inline-block;
+    background: #eee;
+    width: 258px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.playerWall.detailed li a:link, a:visited {
+    color: #4e2d15;
+    text-decoration: none;
+}
+
+.playerWall.detailed li a {
+    display: block;
+    height: 60px;
+    padding: 8px;
+    transition: background .2s;
+}
+.playerWall.detailed li a:hover {
+    background-color: darkgray;
+    transition: background .2s;
+    border-radius: 3px;
+
+}
+.playerWall.detailed li img {
+    margin-right: 8px;
+    float: left;
+    vertical-align: middle;
+}
+.playerWall li img {
+    border-radius: 3px;
+}
+.playerWall.detailed li .playerInfo {
+    float: left;
+    padding: 5px;
+}
+.playerWall.detailed li .playerInfo .username {
+    font-size: 14px;
+    font-weight: 700;
+}
+.playerWall.detailed li .playerInfo .game {
+    color: #777;
+    font-size: 12px;
+}
+.playerWall.detailed li img {
+    height: 50px;
+}
+
+
+
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: auto;
+    height: 200px;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work .Skill{
+    font-size: 1em;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+
+@media (max-width: 767px) {
+    .margin_mobile{
+        margin-bottom: 250px;
+    }
+}
+
